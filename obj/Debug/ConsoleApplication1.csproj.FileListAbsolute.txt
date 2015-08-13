@@ -1,0 +1,11 @@
+c:\users\r.kutliahmetov\documents\visual studio 2013\Projects\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+c:\users\r.kutliahmetov\documents\visual studio 2013\Projects\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+c:\users\r.kutliahmetov\documents\visual studio 2013\Projects\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+c:\users\r.kutliahmetov\documents\visual studio 2013\Projects\ConsoleApplication1\bin\Debug\StackExchange.Redis.dll
+c:\users\r.kutliahmetov\documents\visual studio 2013\Projects\ConsoleApplication1\bin\Debug\StackExchange.Redis.pdb
+c:\users\r.kutliahmetov\documents\visual studio 2013\Projects\ConsoleApplication1\bin\Debug\StackExchange.Redis.xml
+c:\users\r.kutliahmetov\documents\visual studio 2013\Projects\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+c:\users\r.kutliahmetov\documents\visual studio 2013\Projects\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+c:\users\r.kutliahmetov\documents\visual studio 2013\Projects\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\ConsoleApplication1\bin\Debug\nunit.framework.dll
+C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\ConsoleApplication1\bin\Debug\nunit.framework.xml
