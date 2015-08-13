@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Configuration;
-
+using System.Threading;
 using NUnit.Framework;
 
 namespace ConsoleApplication1
@@ -35,7 +35,7 @@ namespace ConsoleApplication1
             TestDelegate tryMethod = () => _cache.Get(key);
 
             // Then
-            Assert.That(tryMethod,Is.Empty);
+            Assert.IsNullOrEmpty(key);
         }
 
         [Test]
@@ -65,5 +65,26 @@ namespace ConsoleApplication1
             // Then
             Assert.AreEqual(value, actualValue);
         }
+
+
+        //[Test]
+        //public void TimeOutSleep()
+        //{
+        //    // Given
+        //    var key = Guid.NewGuid().ToString();
+        //    var value = Guid.NewGuid().ToString();
+        //    var timeout = new TimeSpan(0, 0, 5);
+            
+        //    //When
+        //    _cache.Set(key,value,timeout);
+        //    Thread.Sleep(4000);
+        //    var value1 = _cache.Get(key);
+        //    Thread.Sleep(4000);
+        //    var value2 = _cache.Get(key);
+
+        //    //Then
+        //    Assert.AreEqual(value, value1);
+        //    Assert.AreEqual(value, value2);
+        //}
     }
 }

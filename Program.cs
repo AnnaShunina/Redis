@@ -20,10 +20,6 @@ namespace ConsoleApplication1
             //Update(db);
             //Show(db);
             //Delete(db);
-            db.StringSet("key", 1, new TimeSpan(0, 0, 20));
-            //var tran = db.CreateTransaction();
-            //tran.StringSetAsync();
-            //bool committed = tran.Execute();
             //if(committed) Console.WriteLine("Sucess");
             redis.Close();
             Console.ReadKey();

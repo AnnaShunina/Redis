@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using StackExchange.Redis;
 
 namespace ConsoleApplication1
@@ -14,7 +15,6 @@ namespace ConsoleApplication1
 
             _database = new Lazy<IDatabase>(() => CreateDatabase(connectionString));
         }
-
 
         private readonly Lazy<IDatabase> _database;
 
@@ -56,7 +56,26 @@ namespace ConsoleApplication1
 
         public void Set(string key, string value, TimeSpan timemout)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrWhiteSpace(key))
+            {
+                throw new ArgumentNullException("key");
+            }
+
+            if (timemout <= TimeSpan.Zero)
+            {
+                Set(key, value);
+            }
+            else
+            {
+                if (value != null)
+                {
+                    _database.Value.StringSet(key, value, timemout);
+                }
+                else
+                {
+                    _database.Value.KeyDelete(key);
+                }
+            }
         }
 
 
