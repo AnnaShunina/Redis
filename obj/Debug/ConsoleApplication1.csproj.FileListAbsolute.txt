@@ -8,3 +8,6 @@ c:\users\r.kutliahmetov\documents\visual studio 2013\Projects\ConsoleApplication
 c:\users\r.kutliahmetov\documents\visual studio 2013\Projects\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
 C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\ConsoleApplication1\bin\Debug\nunit.framework.dll
 C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\ConsoleApplication1\bin\Debug\nunit.framework.xml
+C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\ConsoleApplication1\bin\Debug\MemoryCache.dll
+C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\ConsoleApplication1\bin\Debug\MemoryCache.pdb
+C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache

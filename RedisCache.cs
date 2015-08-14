@@ -78,6 +78,17 @@ namespace ConsoleApplication1
             }
         }
 
+        public void Subscribe(string sub)
+        {
+            ISubscriber _sub;
+            _sub.Subscribe(sub, MyHandler);
+        }
+
+        private void MyHandler(RedisChannel arg1, RedisValue arg2)
+        {
+            throw new NotImplementedException();
+        }
+
 
         public void Dispose()
         {
