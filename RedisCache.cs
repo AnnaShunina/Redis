@@ -69,7 +69,7 @@ namespace ConsoleApplication1
             {
                 if (value != null)
                 {
-                    _database.Value.StringSet(key, value, timemout);
+                    _database.Value.StringSet(key, value,timemout);
                 }
                 else
                 {
@@ -77,18 +77,6 @@ namespace ConsoleApplication1
                 }
             }
         }
-
-        public void Subscribe(string sub)
-        {
-            ISubscriber _sub;
-            _sub.Subscribe(sub, MyHandler);
-        }
-
-        private void MyHandler(RedisChannel arg1, RedisValue arg2)
-        {
-            throw new NotImplementedException();
-        }
-
 
         public void Dispose()
         {

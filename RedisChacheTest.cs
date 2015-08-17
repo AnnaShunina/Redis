@@ -74,12 +74,13 @@ namespace ConsoleApplication1
         //    var key = Guid.NewGuid().ToString();
         //    var value = Guid.NewGuid().ToString();
         //    var timeout = new TimeSpan(0, 0, 5);
-            
+
         //    //When
-        //    _cache.Set(key,value,timeout);
-        //    Thread.Sleep(4000);
+        //    _cache.Set(key, value, timeout);
+        //    Thread.Sleep(2000);
         //    var value1 = _cache.Get(key);
-        //    Thread.Sleep(4000);
+
+        //    Thread.Sleep(3000);
         //    var value2 = _cache.Get(key);
 
         //    //Then
