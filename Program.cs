@@ -18,32 +18,16 @@ namespace ConsoleApplication1
         {
             var connectionString = ConfigurationManager.AppSettings["RedisConnectionString"];
 
-            var cacheRedis = new RedisCache(connectionString);
+            var cacheRedis = new RedisCacheImpl(connectionString);
             // something code
             cacheRedis.Dispose();
 
             var subscriber = new RedisMessageBus(connectionString);
             // something code
-
             subscriber.Subscribe("key1", MyHandler);
-            subscriber.Subscribe("key2", MyHandler);
-            subscriber.Subscribe("key3", MyHandler);
-
-            var p = Process.GetCurrentProcess().Id;
-
-            for (int i = 0; i < 100; i++)
-            {
-                subscriber.Publish("key1", string.Format("vale1 pid={0}, index={1}", p, i));
-                subscriber.Publish("key2", string.Format("vale2 pid={0}, index={1}", p, i));
-                subscriber.Publish("key3", string.Format("vale3 pid={0}, index={1}", p, i));
-                subscriber.Publish("key4", string.Format("vale4 pid={0}, index={1}", p, i));
-
-                Thread.Sleep(1000);
-            }
-
-            subscriber.Dispose();
-
+           
             Console.ReadKey();
+            subscriber.Dispose();
         }
 
         private static void MyHandler(string key, string value)

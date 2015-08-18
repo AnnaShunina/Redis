@@ -13,7 +13,7 @@ namespace ConsoleApplication1
         {
             var connectionString = ConfigurationManager.AppSettings.Get("RedisConnectionString");
 
-            _cache = new RedisCache(connectionString);
+            _cache = new RedisCacheImpl(connectionString);
         }
 
         [TearDown]
@@ -23,7 +23,7 @@ namespace ConsoleApplication1
         }
 
 
-        private RedisCache _cache;
+        private RedisCacheImpl _cache;
 
         [Test]
         public void ShouldThrowExceptionWhenKeyIsEmpty()

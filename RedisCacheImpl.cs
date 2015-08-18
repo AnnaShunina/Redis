@@ -1,21 +1,29 @@
 ﻿using System;
-using System.Threading;
+
 using StackExchange.Redis;
 
 namespace ConsoleApplication1
 {
-    internal class RedisCache : ICache, IDisposable
+    internal class RedisCacheImpl : ICache, IDisposable
     {
-        public RedisCache(string connectionString)
+        public RedisCacheImpl(string name, string connectionString)
         {
+            if (string.IsNullOrEmpty(name))
+            {
+                throw new ArgumentNullException("name");
+            }
+
             if (string.IsNullOrWhiteSpace(connectionString))
             {
                 throw new ArgumentNullException("connectionString");
             }
 
+            _name = name;
             _database = new Lazy<IDatabase>(() => CreateDatabase(connectionString));
         }
 
+
+        private readonly string _name;
         private readonly Lazy<IDatabase> _database;
 
 
@@ -34,7 +42,9 @@ namespace ConsoleApplication1
                 throw new ArgumentNullException("key");
             }
 
-            return _database.Value.StringGet(key);
+            var cacheKey = GetCacheKey(key);
+
+            return _database.Value.StringGet(cacheKey);
         }
 
         public void Set(string key, string value)
@@ -44,39 +54,24 @@ namespace ConsoleApplication1
                 throw new ArgumentNullException("key");
             }
 
+            var cacheKey = GetCacheKey(key);
+
             if (value != null)
             {
-                _database.Value.StringSet(key, value);
+                _database.Value.StringSet(cacheKey, value);
             }
             else
             {
-                _database.Value.KeyDelete(key);
+                _database.Value.KeyDelete(cacheKey);
             }
         }
 
-        public void Set(string key, string value, TimeSpan timemout)
+
+        private string GetCacheKey(string key)
         {
-            if (string.IsNullOrWhiteSpace(key))
-            {
-                throw new ArgumentNullException("key");
-            }
-
-            if (timemout <= TimeSpan.Zero)
-            {
-                Set(key, value);
-            }
-            else
-            {
-                if (value != null)
-                {
-                    _database.Value.StringSet(key, value,timemout);
-                }
-                else
-                {
-                    _database.Value.KeyDelete(key);
-                }
-            }
+            return string.Format("{0}.{1}", _name, key);
         }
+
 
         public void Dispose()
         {
