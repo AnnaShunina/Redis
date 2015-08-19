@@ -1,8 +1,7 @@
 ﻿using System;
-
 using StackExchange.Redis;
 
-namespace ConsoleApplication1
+namespace Redis
 {
     internal sealed class RedisMessageBus : IMessageBus
     {
@@ -58,7 +57,6 @@ namespace ConsoleApplication1
         internal sealed class RedisSubscriber : IDisposable
         {
             private readonly Action _unsubscribe;
-
             public RedisSubscriber(Action unsubscribe)
             {
                 _unsubscribe = unsubscribe;

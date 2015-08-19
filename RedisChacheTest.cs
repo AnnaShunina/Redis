@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Configuration;
-using System.Threading;
 using NUnit.Framework;
 
-namespace ConsoleApplication1
+namespace Redis
 {
     [TestFixture]
     class RedisChacheTest
@@ -13,7 +12,7 @@ namespace ConsoleApplication1
         {
             var connectionString = ConfigurationManager.AppSettings.Get("RedisConnectionString");
 
-            _cache = new RedisCacheImpl(connectionString);
+            _cache = new RedisCacheImpl("example",connectionString);
         }
 
         [TearDown]
@@ -65,27 +64,5 @@ namespace ConsoleApplication1
             // Then
             Assert.AreEqual(value, actualValue);
         }
-
-
-        //[Test]
-        //public void TimeOutSleep()
-        //{
-        //    // Given
-        //    var key = Guid.NewGuid().ToString();
-        //    var value = Guid.NewGuid().ToString();
-        //    var timeout = new TimeSpan(0, 0, 5);
-
-        //    //When
-        //    _cache.Set(key, value, timeout);
-        //    Thread.Sleep(2000);
-        //    var value1 = _cache.Get(key);
-
-        //    Thread.Sleep(3000);
-        //    var value2 = _cache.Get(key);
-
-        //    //Then
-        //    Assert.AreEqual(value, value1);
-        //    Assert.AreEqual(value, value2);
-        //}
     }
 }

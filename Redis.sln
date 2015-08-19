@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1.csproj", "{C836FEA2-1FD9-478B-A913-C762D2064524}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Redis", "Redis.csproj", "{C836FEA2-1FD9-478B-A913-C762D2064524}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

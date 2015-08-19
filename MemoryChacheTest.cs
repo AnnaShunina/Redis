@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MemoryCache;
+using System.Runtime.Caching;
 using NUnit.Framework;
 
-namespace ConsoleApplication1
+namespace Redis
 {
     [TestFixture]
     class MemoryChacheTest
@@ -16,7 +12,7 @@ namespace ConsoleApplication1
         [SetUp]
         public void SetUp()
         {
-            _cache = new MemoryCache();
+            _cache = new MemoryCache("example");
         }
         [TearDown]
         public void TearDown()
@@ -58,7 +54,7 @@ namespace ConsoleApplication1
             var value = Guid.NewGuid().ToString();
 
             // When
-            _cache.Set(key, value);
+            _cache.Set(key, value, new CacheItemPolicy());
             var actualValue = _cache.Get(key);
 
             // Then

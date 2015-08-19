@@ -1,0 +1,11 @@
+C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\bin\Debug\nunit.framework.dll
+C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\bin\Debug\StackExchange.Redis.dll
+C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\bin\Debug\nunit.framework.xml
+C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\bin\Debug\StackExchange.Redis.pdb
+C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\bin\Debug\StackExchange.Redis.xml
+C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\bin\Debug\Redis.exe.config
+C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\bin\Debug\Redis.exe
+C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\bin\Debug\Redis.pdb
+C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\obj\Debug\Redis.csprojResolveAssemblyReference.cache
+C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\obj\Debug\Redis.exe
+C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\obj\Debug\Redis.pdb

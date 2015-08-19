@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Runtime.Caching;
 
-namespace ConsoleApplication1
+namespace Redis
 {
     internal class MemoryCacheImpl : ICache, IDisposable
     {
@@ -14,11 +14,12 @@ namespace ConsoleApplication1
             }
 
             _cache = new MemoryCache(name);
+            _name = name;
         }
 
 
         private readonly MemoryCache _cache;
-
+        private readonly string _name;
 
         public bool Contains(string key)
         {
@@ -63,7 +64,7 @@ namespace ConsoleApplication1
                 throw new ArgumentNullException("value");
             }
 
-            _cache.Set(key, value, DateTimeOffset.MaxValue);
+            _cache.Set(key, value, new CacheItemPolicy());
         }
 
         public void Remove(string key)
@@ -83,7 +84,6 @@ namespace ConsoleApplication1
                 _cache.Remove(item.Key);
             }
         }
-
 
         public void Dispose()
         {

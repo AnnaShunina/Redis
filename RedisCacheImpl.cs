@@ -1,8 +1,8 @@
 ﻿using System;
-
+using System.Collections.Generic;
 using StackExchange.Redis;
 
-namespace ConsoleApplication1
+namespace Redis
 {
     internal class RedisCacheImpl : ICache, IDisposable
     {
@@ -20,12 +20,13 @@ namespace ConsoleApplication1
 
             _name = name;
             _database = new Lazy<IDatabase>(() => CreateDatabase(connectionString));
+            _listValues = new List<string>();
         }
 
 
         private readonly string _name;
         private readonly Lazy<IDatabase> _database;
-
+        private readonly List<string> _listValues;  
 
         private static IDatabase CreateDatabase(string connectionString)
         {
@@ -35,16 +36,40 @@ namespace ConsoleApplication1
         }
 
 
-        public string Get(string key)
+        public bool Contains(string key)
         {
-            if (string.IsNullOrWhiteSpace(key))
+            if (string.IsNullOrEmpty(key))
             {
                 throw new ArgumentNullException("key");
             }
 
-            var cacheKey = GetCacheKey(key);
+            return _database.Value.KeyExists(GetCacheKey(key));
+        }
 
-            return _database.Value.StringGet(cacheKey);
+        public string Get(string key)
+        {
+            string value;
+
+            TryGet(key, out value);
+
+            return value;
+        }
+
+        public bool TryGet(string key, out string value)
+        {
+            if (string.IsNullOrEmpty(key))
+            {
+                throw new ArgumentNullException("key");
+            }
+
+            value = (string)_database.Value.StringGet(GetCacheKey(key));
+
+            if (!_listValues.Contains(GetCacheKey(key)))
+            {
+                _listValues.Add(GetCacheKey(key));
+            }
+
+            return (value == null);
         }
 
         public void Set(string key, string value)
@@ -59,15 +84,41 @@ namespace ConsoleApplication1
             if (value != null)
             {
                 _database.Value.StringSet(cacheKey, value);
+
+                if (!_listValues.Contains(cacheKey))
+                {
+                    _listValues.Add(cacheKey);
+                }
             }
             else
             {
                 _database.Value.KeyDelete(cacheKey);
+                _listValues.Remove(cacheKey);
             }
         }
 
+        public void Remove(string key)
+        {
+            if (string.IsNullOrEmpty(key))
+            {
+                throw new ArgumentNullException("key");
+            }
 
-        private string GetCacheKey(string key)
+            _database.Value.KeyDelete(GetCacheKey(key));
+            _listValues.Remove(GetCacheKey(key));
+        }
+
+        public void Clear()
+        {
+            foreach (var item in _listValues)
+            {
+                _database.Value.KeyDelete(item);
+            }
+            _listValues.Clear();
+        }
+
+
+        public string GetCacheKey(string key)
         {
             return string.Format("{0}.{1}", _name, key);
         }

@@ -1,4 +1,7 @@
-﻿namespace ConsoleApplication1
+﻿using System.Configuration;
+using System.Security.Cryptography.X509Certificates;
+
+namespace Redis
 {
     interface ICache
     {
