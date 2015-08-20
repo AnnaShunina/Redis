@@ -1,5 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Linq;
+
 using StackExchange.Redis;
 
 namespace Redis
@@ -8,7 +9,7 @@ namespace Redis
     {
         public RedisCacheImpl(string name, string connectionString)
         {
-            if (string.IsNullOrEmpty(name))
+            if (string.IsNullOrWhiteSpace(name))
             {
                 throw new ArgumentNullException("name");
             }
@@ -20,13 +21,11 @@ namespace Redis
 
             _name = name;
             _database = new Lazy<IDatabase>(() => CreateDatabase(connectionString));
-            _listValues = new List<string>();
         }
 
 
         private readonly string _name;
         private readonly Lazy<IDatabase> _database;
-        private readonly List<string> _listValues;  
 
         private static IDatabase CreateDatabase(string connectionString)
         {
@@ -38,12 +37,14 @@ namespace Redis
 
         public bool Contains(string key)
         {
-            if (string.IsNullOrEmpty(key))
+            if (string.IsNullOrWhiteSpace(key))
             {
                 throw new ArgumentNullException("key");
             }
 
-            return _database.Value.KeyExists(GetCacheKey(key));
+            var cacheKey = GetCacheKey(key);
+
+            return _database.Value.KeyExists(cacheKey);
         }
 
         public string Get(string key)
@@ -57,19 +58,17 @@ namespace Redis
 
         public bool TryGet(string key, out string value)
         {
-            if (string.IsNullOrEmpty(key))
+            if (string.IsNullOrWhiteSpace(key))
             {
                 throw new ArgumentNullException("key");
             }
 
-            value = (string)_database.Value.StringGet(GetCacheKey(key));
+            var cacheKey = GetCacheKey(key);
+            var cacheValue = _database.Value.StringGet(cacheKey);
 
-            if (!_listValues.Contains(GetCacheKey(key)))
-            {
-                _listValues.Add(GetCacheKey(key));
-            }
+            value = cacheValue;
 
-            return (value == null);
+            return cacheValue.HasValue;
         }
 
         public void Set(string key, string value)
@@ -84,41 +83,46 @@ namespace Redis
             if (value != null)
             {
                 _database.Value.StringSet(cacheKey, value);
-
-                if (!_listValues.Contains(cacheKey))
-                {
-                    _listValues.Add(cacheKey);
-                }
             }
             else
             {
                 _database.Value.KeyDelete(cacheKey);
-                _listValues.Remove(cacheKey);
             }
         }
 
         public void Remove(string key)
         {
-            if (string.IsNullOrEmpty(key))
+            if (string.IsNullOrWhiteSpace(key))
             {
                 throw new ArgumentNullException("key");
             }
 
-            _database.Value.KeyDelete(GetCacheKey(key));
-            _listValues.Remove(GetCacheKey(key));
+            var cacheKey = GetCacheKey(key);
+
+            _database.Value.KeyDelete(cacheKey);
         }
 
         public void Clear()
         {
-            foreach (var item in _listValues)
+            var database = _database.Value;
+
+            var endpoints = database.Multiplexer.GetEndPoints();
+
+            if (endpoints != null && endpoints.Length > 0)
             {
-                _database.Value.KeyDelete(item);
+                var server = database.Multiplexer.GetServer(endpoints[0]);
+
+                if (server != null)
+                {
+                    var allKeys = server.Keys(database.Database, _name + ".*").ToArray();
+
+                    database.KeyDelete(allKeys);
+                }
             }
-            _listValues.Clear();
         }
 
 
-        public string GetCacheKey(string key)
+        private string GetCacheKey(string key)
         {
             return string.Format("{0}.{1}", _name, key);
         }
@@ -129,7 +133,6 @@ namespace Redis
             if (_database.IsValueCreated)
             {
                 var connection = _database.Value.Multiplexer;
-                connection.Close();
                 connection.Dispose();
             }
         }

@@ -49,17 +49,17 @@ namespace Redis
 
             value = (string)_cache.Get(key);
 
-            return (value == null);
+            return value != null;
         }
 
         public void Set(string key, string value)
         {
-            if (string.IsNullOrEmpty(key))
+            if (string.IsNullOrWhiteSpace(key))
             {
                 throw new ArgumentNullException("key");
             }
 
-            if (value == null)
+            if (string.IsNullOrWhiteSpace(value))
             {
                 throw new ArgumentNullException("value");
             }

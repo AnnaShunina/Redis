@@ -6,6 +6,6 @@ C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\bin\Debug\St
 C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\bin\Debug\Redis.exe.config
 C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\bin\Debug\Redis.exe
 C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\bin\Debug\Redis.pdb
-C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\obj\Debug\Redis.csprojResolveAssemblyReference.cache
 C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\obj\Debug\Redis.exe
 C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\obj\Debug\Redis.pdb
+C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\obj\Debug\Redis.csprojResolveAssemblyReference.cache

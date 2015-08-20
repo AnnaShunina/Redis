@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Threading;
 
 namespace Redis
 {
@@ -81,7 +80,7 @@ namespace Redis
         // todo: Накапливать задачи и отправлять на исполнение
         public void Set(string key, string value)
         {
-            if (string.IsNullOrEmpty(key))
+            if (string.IsNullOrWhiteSpace(key))
             {
                 throw new ArgumentNullException("key");
             }
@@ -187,10 +186,26 @@ namespace Redis
             {
                 dispose2.Dispose();
             }
+
+            var messageBus = _messageBus as IDisposable;
+
+            if (messageBus != null)
+            {
+                messageBus.Dispose();
+            }
+
         }
 
         public void Publish(string key, string value)
         {
+            if (string.IsNullOrWhiteSpace(key))
+            {
+                throw new ArgumentNullException("key");
+            }
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                throw new ArgumentNullException("value");
+            }
             _messageBus.Publish(key, value);
         }
 

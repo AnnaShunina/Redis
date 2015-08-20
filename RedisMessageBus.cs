@@ -3,7 +3,7 @@ using StackExchange.Redis;
 
 namespace Redis
 {
-    internal sealed class RedisMessageBus : IMessageBus
+    internal sealed class RedisMessageBus : IMessageBus, IDisposable
     {
         public RedisMessageBus(string connectionString)
         {
@@ -28,11 +28,28 @@ namespace Redis
 
         public void Publish(string key, string value)
         {
+            if (string.IsNullOrWhiteSpace(key))
+            {
+                throw new ArgumentNullException("key");
+            }
+
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                throw new ArgumentNullException("value");
+            }
             _subscriber.Value.Publish(key, value);
         }
 
         public IDisposable Subscribe(string key, Action<string, string> handler)
         {
+            if (string.IsNullOrWhiteSpace(key))
+            {
+                throw new ArgumentNullException("key");
+            }
+            if (handler == null)
+            {
+                throw new ArgumentNullException("handler");
+            }
             var subscription = new RedisChannel(key, RedisChannel.PatternMode.Literal);
 
             var subscriber = new RedisSubscriber(() => _subscriber.Value.Unsubscribe(subscription));
