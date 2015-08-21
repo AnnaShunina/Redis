@@ -59,12 +59,16 @@ namespace Redis
                 throw new ArgumentNullException("key");
             }
 
-            if (string.IsNullOrWhiteSpace(value))
+            if (value != null)
             {
-                throw new ArgumentNullException("value");
+                _cache.Set(key, value, new CacheItemPolicy());
+            }
+            else
+            {
+                _cache.Remove(key);
             }
 
-            _cache.Set(key, value, new CacheItemPolicy());
+            
         }
 
         public void Remove(string key)

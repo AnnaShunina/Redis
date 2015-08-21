@@ -11,7 +11,7 @@ namespace Redis
         [SetUp]
         public void SetUp()
         {
-            var connectionString = ConfigurationManager.AppSettings["RedisConnectionString"];
+            var connectionString = ConfigurationManager.AppSettings.Get("RedisConnectionString");
             _messageBus = new RedisMessageBus(connectionString);
         }
 
@@ -42,15 +42,22 @@ namespace Redis
         {
             int a = 0;
             var sub = _messageBus.Subscribe("test", delegate { Interlocked.Increment(ref a); });
-            _messageBus.Publish("test","verify");
+            _messageBus.Publish("test","test");
+            Thread.Sleep(1000);
             Assert.AreEqual(1, Thread.VolatileRead(ref a));
             sub.Dispose();
         }
-        //public void ShouldThrownWhenKeyNullOrEmptySubscribe()
-        //{
-        //    //Given
-        //    //When
-        //    //Then
-        //}
+
+        [Test]
+        [TestCase(null)]
+        [TestCase("")]
+        public void ShouldThrownWhenKeyNullOrEmptySubscribe(String key)
+        {
+            //Given
+            //When
+            TestDelegate testDelegate = ()=> _messageBus.Subscribe(key, delegate { });
+            //Then
+            Assert.Throws<ArgumentNullException>(testDelegate);
+        }
     }
 }

@@ -1,39 +1,40 @@
 ﻿using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
 
 namespace Redis
 {
     internal class TwoLayerCacheImpl : ICache, IDisposable
     {
-        public TwoLayerCacheImpl(ICache layer1, ICache layer2, IMessageBus messageBus)
+        public TwoLayerCacheImpl(ICache cacheLayer1, ICache cacheLayer2, IMessageBus messageBus)
         {
-            if (layer1 == null)
+            if (cacheLayer1 == null)
             {
-                throw new ArgumentNullException("layer1");
+                throw new ArgumentNullException("cacheLayer1");
             }
 
-            if (layer2 == null)
+            if (cacheLayer2 == null)
             {
-                throw new ArgumentNullException("layer2");
+                throw new ArgumentNullException("cacheLayer2");
             }
 
-            _layer1 = layer1;
-            _layer2 = layer2;
+            _cacheLayer1 = cacheLayer1;
+            _cacheLayer2 = cacheLayer2;
             _messageBus = messageBus;
+            _publisherId = Guid.NewGuid().ToString("N");
             _subscriptions = new ConcurrentDictionary<string, IDisposable>();
         }
 
 
-        private readonly ICache _layer1;
-        private readonly ICache _layer2;
+        private readonly string _publisherId;
+        private readonly ICache _cacheLayer1;
+        private readonly ICache _cacheLayer2;
         private readonly IMessageBus _messageBus;
         private readonly ConcurrentDictionary<string, IDisposable> _subscriptions;
 
 
         public bool Contains(string key)
         {
-            return _layer1.Contains(key) || _layer2.Contains(key);
+            return _cacheLayer1.Contains(key) || _cacheLayer2.Contains(key);
         }
 
         public string Get(string key)
@@ -51,33 +52,25 @@ namespace Redis
             {
                 throw new ArgumentNullException("key");
             }
-            
-            if (_layer1.TryGet(key, out value))
+
+            var exists = false;
+
+            if (!_cacheLayer1.TryGet(key, out value))
             {
-                if (_layer2.TryGet(key, out value))
+                if (!_cacheLayer2.TryGet(key, out value))
                 {
                     value = null;
                 }
-            }
-
-            // Sub
-            bool exist = false;
-            foreach (var subscription in _subscriptions.ToArray())
-            {
-                if (subscription.Key == key)
-                { 
-                    exist = true;
-                    break;
+                else
+                {
+                    exists = true;
+                    SubscribeOnKeyChanged(key);
                 }
             }
-            if (exist == false)
-            {
-                Subscribe(new KeyValuePair<string, IDisposable>(key, _messageBus.Subscribe(key, MyHandler)));
-            }
-            return (value == null);
+
+            return exists;
         }
 
-        // todo: Накапливать задачи и отправлять на исполнение
         public void Set(string key, string value)
         {
             if (string.IsNullOrWhiteSpace(key))
@@ -90,137 +83,123 @@ namespace Redis
                 throw new ArgumentNullException("value");
             }
 
-            if (_layer2.Get(key) == value && _layer1.Get(key) == value) return;
-            if(_layer2.Contains(key)) Publish(key, "Change a value of key: " + key + " to " + value);
+            _cacheLayer1.Set(key, value);
+            _cacheLayer2.Set(key, value);
 
-            if(_layer1.Get(key) != value) _layer1.Set(key, value);
-            if(_layer2.Get(key) != value) _layer2.Set(key, value);
-
-            // Sub
-            bool exist = false;
-            foreach (var subscription in _subscriptions.ToArray())
-            {
-                if (subscription.Key == key)
-                {
-                    exist = true;
-                    break;
-                }
-            }
-            if (exist == false)
-            {
-                Subscribe(new KeyValuePair<string, IDisposable>(key, _messageBus.Subscribe(key, MyHandler)));
-            }
-        }
-
-        private static void MyHandler(string key, string value)
-        {
-            Console.WriteLine("Subscriber: key={0}, value={1}", key, value);
+            NotifyOnKeyChanged(key);
+            SubscribeOnKeyChanged(key);
         }
 
         public void Remove(string key)
-        {
-
-            // Unsub
-            foreach (var subscription in _subscriptions.ToArray())
-            {
-                if (subscription.Key == key)
-                {
-                    Publish(key, "Remove key: " + subscription.Key);
-                    Unsubscribe(subscription.Key);
-                    break;
-                }
-            }
-            // ??
-            try
-            {
-                _layer1.Remove(key);
-            }
-            finally
-            {
-                _layer2.Remove(key);
-            }
-            
-        }
-
-        public void Clear()
-        {
-
-            // Unsub
-            foreach (var subscription in _subscriptions.ToArray())
-            {
-                Publish(subscription.Key, "Clear all: " + subscription.Key);
-                Unsubscribe(subscription.Key);
-            }
-            // ??
-            try
-            {
-                _layer1.Clear();
-            }
-            finally
-            {
-                _layer2.Clear();
-            }
-            
-        }
-
-        public void Dispose()
-        {
-
-            // Unsub
-            foreach (var subscription in _subscriptions.ToArray())
-            {
-                Publish(subscription.Key,"Dispose: " + subscription.Key);
-                Unsubscribe(subscription.Key);
-            }
-            
-            var dispose1 = _layer1 as IDisposable;
-
-            if (dispose1 != null)
-            {
-                dispose1.Dispose();
-            }
-
-            var dispose2 = _layer2 as IDisposable;
-
-            if (dispose2 != null)
-            {
-                dispose2.Dispose();
-            }
-
-            var messageBus = _messageBus as IDisposable;
-
-            if (messageBus != null)
-            {
-                messageBus.Dispose();
-            }
-
-        }
-
-        public void Publish(string key, string value)
         {
             if (string.IsNullOrWhiteSpace(key))
             {
                 throw new ArgumentNullException("key");
             }
-            if (string.IsNullOrWhiteSpace(value))
+
+            try
             {
-                throw new ArgumentNullException("value");
+                try
+                {
+                    _cacheLayer1.Remove(key);
+                }
+                finally
+                {
+                    _cacheLayer2.Remove(key);
+                }
             }
-            _messageBus.Publish(key, value);
-        }
-
-        private void Subscribe(KeyValuePair<string, IDisposable> subscriptionPair)
-        {
-            _subscriptions.TryAdd(subscriptionPair.Key, subscriptionPair.Value);
-        }
-
-        private void Unsubscribe(string key)
-        {
-            IDisposable deletedSubscription;
-
-            if (_subscriptions.TryRemove(key, out deletedSubscription))
+            finally
             {
-                deletedSubscription.Dispose();
+                NotifyOnKeyChanged(key);
+                UnsubscribeOnKeyChanged(key);
+            }
+        }
+
+        public void Clear()
+        {
+            try
+            {
+                try
+                {
+                    _cacheLayer1.Clear();
+                }
+                finally
+                {
+                    _cacheLayer2.Clear();
+                }
+            }
+            finally
+            {
+                foreach (var subscription in _subscriptions.ToArray())
+                {
+                    NotifyOnKeyChanged(subscription.Key);
+                    UnsubscribeOnKeyChanged(subscription.Key);
+                }
+            }
+        }
+
+
+        public void Dispose()
+        {
+            foreach (var subscription in _subscriptions.ToArray())
+            {
+                UnsubscribeOnKeyChanged(subscription.Key);
+            }
+        }
+
+
+        private void NotifyOnKeyChanged(string key)
+        {
+            try
+            {
+                _messageBus.Publish(key, _publisherId);
+            }
+            catch
+            {
+            }
+        }
+
+        private void SubscribeOnKeyChanged(string key)
+        {
+            if (!_subscriptions.ContainsKey(key))
+            {
+                try
+                {
+                    var subscription = _messageBus.Subscribe(key, (k, v) =>
+                    {
+                        if (v != _publisherId)
+                        {
+                            try
+                            {
+                                _cacheLayer1.Remove(k);
+                            }
+                            catch
+                            {
+                            }
+                        }
+                    });
+
+                    _subscriptions.TryAdd(key, subscription);
+                }
+                catch
+                {
+                }
+            }
+        }
+
+        private void UnsubscribeOnKeyChanged(string key)
+        {
+            IDisposable subscription;
+
+            if (_subscriptions.TryRemove(key, out subscription))
+            {
+                try
+                {
+                    subscription.Dispose();
+                }
+                catch
+                {
+                }
             }
         }
     }

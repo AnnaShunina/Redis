@@ -3,7 +3,7 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace Redis
 {
-    interface ICache
+    public interface ICache
     {
         bool Contains(string key);
 
