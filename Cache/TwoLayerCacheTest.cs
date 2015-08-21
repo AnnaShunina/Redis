@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System.Threading;
+using NUnit.Framework;
 
 namespace Redis
 {
@@ -181,6 +182,20 @@ namespace Redis
             //Then
             Assert.IsTrue(published);
         }
-        
+
+        [Test]
+        public void ShouldNotifyOneTime()
+        {
+            //Given
+            var a = 0;
+            //When
+            _messageBus.Subscribe("key1", (k, v) => Interlocked.Increment(ref a));
+            _messageBus.Subscribe("key1", (k, v) => Interlocked.Increment(ref a));
+            _twoLayerCache.Set("key1", "value1");
+            _twoLayerCache.Set("key1", "value2");
+            Thread.Sleep(1000);
+            //Then
+            Assert.AreEqual(1, Thread.VolatileRead(ref a));
+        }
     }
 }

@@ -6,7 +6,7 @@ using NUnit.Framework;
 namespace Redis
 {
     [TestFixture]
-    class RedisChacheTest
+    class RedisCacheTest
     {
         [SetUp]
         public void SetUp()

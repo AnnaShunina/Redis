@@ -5,7 +5,7 @@ using NUnit.Framework;
 namespace Redis
 {
     [TestFixture]
-    class MemoryChacheTest
+    class MemoryCacheTest
     {
         private MemoryCacheImpl _cache;
 
