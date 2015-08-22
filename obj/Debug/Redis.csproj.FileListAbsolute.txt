@@ -11,3 +11,6 @@ C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\obj\Debug\Re
 C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\obj\Debug\Redis.csprojResolveAssemblyReference.cache
 C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\obj\Debug\Redis.Properties.Resources.resources
 C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\obj\Debug\Redis.csproj.GenerateResource.Cache
+C:\Users\Admin\Documents\GitHub\Redis\bin\Debug\Redis.exe.config
+C:\Users\Admin\Documents\GitHub\Redis\obj\Debug\Redis.exe
+C:\Users\Admin\Documents\GitHub\Redis\obj\Debug\Redis.pdb

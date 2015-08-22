@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Redis
+namespace Redis.Cache.Interface
 {
     interface IMessageBus
     {

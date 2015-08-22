@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Configuration;
-
 using NUnit.Framework;
 
-namespace Redis
+namespace Redis.Cache.RedisCache
 {
     [TestFixture]
     class RedisCacheTest
@@ -97,8 +96,8 @@ namespace Redis
             //When
             _cache.Set(key,value);
             //Then
-            string _value = _cache.Get(key);
-            Assert.AreEqual(value, _value);
+            string value2 = _cache.Get(key);
+            Assert.AreEqual(value, value2);
         }
 
         [Test]

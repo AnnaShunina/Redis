@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Linq;
 using System.Runtime.Caching;
+using Redis.Cache.Interface;
 
-namespace Redis
+namespace Redis.Cache.MemoryCache
 {
     internal class MemoryCacheImpl : ICache, IDisposable
     {
@@ -13,13 +14,13 @@ namespace Redis
                 throw new ArgumentNullException("name");
             }
 
-            _cache = new MemoryCache(name);
-            _name = name;
+            _cache = new System.Runtime.Caching.MemoryCache(name);
+            Name = name;
         }
 
 
-        private readonly MemoryCache _cache;
-        private readonly string _name;
+        private readonly System.Runtime.Caching.MemoryCache _cache;
+        public string Name { get; private set; }
 
         public bool Contains(string key)
         {

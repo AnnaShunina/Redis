@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using Redis.Cache.Interface;
 
-namespace Redis
+namespace Redis.Fake
 {
     internal sealed class FakeMessageBus : IMessageBus, IDisposable
     {
-        public readonly Dictionary<string, FakeSubscriber> _subscribers
+        public readonly Dictionary<string, FakeSubscriber> Subscribers
             = new Dictionary<string, FakeSubscriber>();
 
 
@@ -13,7 +14,7 @@ namespace Redis
         {
             FakeSubscriber subscriber;
 
-            if (_subscribers.TryGetValue(key, out subscriber))
+            if (Subscribers.TryGetValue(key, out subscriber))
             {
                 subscriber.Handle(key, value);
             }
@@ -21,16 +22,16 @@ namespace Redis
 
         public IDisposable Subscribe(string key, Action<string, string> handler)
         {
-            var subscriber = new FakeSubscriber(handler, () => _subscribers.Remove(key));
+            var subscriber = new FakeSubscriber(handler, () => Subscribers.Remove(key));
 
-            _subscribers[key] = subscriber;
+            Subscribers[key] = subscriber;
 
             return subscriber;
         }
 
         public void Dispose()
         {
-            _subscribers.Clear();
+            Subscribers.Clear();
         }
 
 

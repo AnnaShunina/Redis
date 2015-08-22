@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Configuration;
-using System.Threading;
+using Redis.Cache;
+using Redis.Cache.MemoryCache;
+using Redis.Cache.RedisCache;
+using Redis.Cache.RedisCache.MessageBus;
 
 namespace Redis
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             var connectionString = ConfigurationManager.AppSettings["RedisConnectionString"];
 
@@ -27,14 +30,6 @@ namespace Redis
             Console.WriteLine(layerCacheImpl.Get("2"));
             Console.ReadKey();
             layerCacheImpl.Dispose();
-            //cacheMemory.Dispose();
-            //cacheRedis.Dispose();
-            //subscriber.Dispose();
-        }
-
-        private static void MyHandler(string key, string value)
-        {
-            Console.WriteLine("Subscriber: key={0}, value={1}", key, value);
         }
     }
 }

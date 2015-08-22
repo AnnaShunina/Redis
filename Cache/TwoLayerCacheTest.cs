@@ -1,7 +1,8 @@
 ﻿using System.Threading;
 using NUnit.Framework;
+using Redis.Fake;
 
-namespace Redis
+namespace Redis.Cache
 {
     [TestFixture]
     class TwoLayerCacheTest
@@ -46,8 +47,8 @@ namespace Redis
         public void CorrectTryGetInLayer1()
         {
             //Given
-            string key = "key1";
-            string val = "value1";
+            const string key = "key1";
+            const string val = "value1";
             //When
             _layer1.Data[key] = val;
             string value;
@@ -60,8 +61,8 @@ namespace Redis
         public void CorrectTryGetInLayer2()
         {
             //Given
-            string key = "key1";
-            string val = "value1";
+            const string key = "key1";
+            const string val = "value1";
             //When
             _layer2.Data[key] = val;
             string value;
@@ -74,8 +75,8 @@ namespace Redis
         public void CorrectGetInLayer1()
         {
             //Given
-            string key = "key1";
-            string val = "value1";
+            const string key = "key1";
+            const string val = "value1";
             //When
             _layer1.Data[key] = val;
             string value = _twoLayerCache.Get(key);
@@ -87,8 +88,8 @@ namespace Redis
         public void CorrectGetInLayer2()
         {
             //Given
-            string key = "key1";
-            string val = "value1";
+            const string key = "key1";
+            const string val = "value1";
             //When
             _layer2.Data[key] = val;
             string value = _twoLayerCache.Get(key);
@@ -100,8 +101,8 @@ namespace Redis
         public void CorrectSet()
         {
             //Given
-            string key = "key1";
-            string value = "value1";
+            const string key = "key1";
+            const string value = "value1";
             //When
             _twoLayerCache.Set(key,value);
             //Then
@@ -113,8 +114,8 @@ namespace Redis
         public void CorrectRemove()
         {
             //Given
-            string key = "key1";
-            string value = "value1";
+            const string key = "key1";
+            const string value = "value1";
             //When
             _twoLayerCache.Set(key, value);
             _twoLayerCache.Remove(key);
@@ -128,12 +129,12 @@ namespace Redis
         public void CorrectClear()
         {
             //Given
-            string key1 = "key1";
-            string value1 = "value1";
-            string key2 = "key2";
-            string value2 = "value2";
-            string key3 = "key3";
-            string value3 = "value3";
+            const string key1 = "key1";
+            const string value1 = "value1";
+            const string key2 = "key2";
+            const string value2 = "value2";
+            const string key3 = "key3";
+            const string value3 = "value3";
             //When
             _twoLayerCache.Set(key1, value1);
             _twoLayerCache.Set(key2, value2);
@@ -187,15 +188,15 @@ namespace Redis
         public void ShouldNotifyOneTime()
         {
             //Given
-            var a = 0;
+            int[] a = {0};
             //When
-            _messageBus.Subscribe("key1", (k, v) => Interlocked.Increment(ref a));
-            _messageBus.Subscribe("key1", (k, v) => Interlocked.Increment(ref a));
+            _messageBus.Subscribe("key1", (k, v) => Interlocked.Increment(ref a[0]));
+            _messageBus.Subscribe("key1", (k, v) => Interlocked.Increment(ref a[0]));
             _twoLayerCache.Set("key1", "value1");
             _twoLayerCache.Set("key1", "value2");
             Thread.Sleep(1000);
             //Then
-            Assert.AreEqual(1, Thread.VolatileRead(ref a));
+            Assert.AreEqual(1, Thread.VolatileRead(ref a[0]));
         }
     }
 }

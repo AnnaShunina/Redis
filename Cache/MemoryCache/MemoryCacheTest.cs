@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Runtime.Caching;
 using NUnit.Framework;
 
-namespace Redis
+namespace Redis.Cache.MemoryCache
 {
     [TestFixture]
     class MemoryCacheTest

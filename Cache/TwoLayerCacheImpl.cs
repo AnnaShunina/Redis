@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Concurrent;
+using Redis.Cache.Interface;
 
-namespace Redis
+namespace Redis.Cache
 {
     internal class TwoLayerCacheImpl : ICache, IDisposable
     {
@@ -156,6 +157,7 @@ namespace Redis
             }
             catch
             {
+                // ignored
             }
         }
 
@@ -175,6 +177,7 @@ namespace Redis
                             }
                             catch
                             {
+                                // ignored
                             }
                         }
                     });
@@ -183,6 +186,7 @@ namespace Redis
                 }
                 catch
                 {
+                    // ignored
                 }
             }
         }
@@ -199,6 +203,7 @@ namespace Redis
                 }
                 catch
                 {
+                    // ignored
                 }
             }
         }

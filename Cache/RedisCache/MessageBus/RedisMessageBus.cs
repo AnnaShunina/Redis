@@ -1,7 +1,8 @@
 ﻿using System;
+using Redis.Cache.Interface;
 using StackExchange.Redis;
 
-namespace Redis
+namespace Redis.Cache.RedisCache.MessageBus
 {
     internal sealed class RedisMessageBus : IMessageBus, IDisposable
     {

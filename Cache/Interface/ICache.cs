@@ -1,7 +1,4 @@
-﻿using System.Configuration;
-using System.Security.Cryptography.X509Certificates;
-
-namespace Redis
+﻿namespace Redis.Cache.Interface
 {
     public interface ICache
     {

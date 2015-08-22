@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
-
+using Redis.Cache.Interface;
 using StackExchange.Redis;
 
-namespace Redis
+namespace Redis.Cache.RedisCache
 {
     internal class RedisCacheImpl : ICache, IDisposable
     {

@@ -3,7 +3,7 @@ using System.Configuration;
 using System.Threading;
 using NUnit.Framework;
 
-namespace Redis
+namespace Redis.Cache.RedisCache.MessageBus
 {
     [TestFixture]
     class RedisMessageBusTest
@@ -40,11 +40,11 @@ namespace Redis
         [Test]
         public void ShouldPublish()
         {
-            int a = 0;
-            var sub = _messageBus.Subscribe("test", delegate { Interlocked.Increment(ref a); });
+            int[] a = {0};
+            var sub = _messageBus.Subscribe("test", delegate { Interlocked.Increment(ref a[0]); });
             _messageBus.Publish("test","test");
             Thread.Sleep(1000);
-            Assert.AreEqual(1, Thread.VolatileRead(ref a));
+            Assert.AreEqual(1, Thread.VolatileRead(ref a[0]));
             sub.Dispose();
         }
 

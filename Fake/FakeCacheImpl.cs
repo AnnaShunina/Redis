@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using Redis.Cache.Interface;
 
-namespace Redis
+namespace Redis.Fake
 {
     internal sealed class FakeCacheImpl : ICache
     {
