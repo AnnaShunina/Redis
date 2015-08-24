@@ -1,0 +1,219 @@
+2015-08-24T11:26:30: Launching bolt session for c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\.redis.boltdata - SessionId: 0053386d-e6ef-45d6-8ed0-52f14c38c01b
+2015-08-24T11:26:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:26:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:26:47: GET http://127.0.0.1:11235/versioninfo.json 200 0,001s 
+2015-08-24T11:26:47: GET http://127.0.0.1:11235/v1/licensed.json 200 0,001s 
+2015-08-24T11:26:48: Launching bolt session for c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\.redis.boltdata - SessionId: 2f180aa9-2147-4da6-89ec-f62fc559ee23
+2015-08-24T11:27:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:27:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:28:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,003s 
+2015-08-24T11:28:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:29:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:29:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:30:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:30:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,000s 
+2015-08-24T11:31:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:31:24: Monitoring Process -- [5804] "C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\NCover\Bolt\5.0.2853.638\Bolt.Agent.40.x86.exe"
+2015-08-24T11:31:24: Waiting for process to exit:  Bolt.Agent.40.x86(5804)
+2015-08-24T11:31:24: Execution -- [E08280F945CAD7FE0A824B79932EEB96D8F6757D] 
+2015-08-24T11:31:24: AllocatedPage -- [Global\GN_PAGE_001_5804] - 16777216
+2015-08-24T11:31:24: Default AppDomain Started -- [1838616416] "mscorlib.dll" [E08280F945CAD7FE0A824B79932EEB96D8F6757D]
+2015-08-24T11:31:24: Default AppDomain Started -- [4945576] "DefaultDomain" [E08280F945CAD7FE0A824B79932EEB96D8F6757D]
+2015-08-24T11:31:24: Default AppDomain Started -- [1838615560] "EE Shared Assembly Repository" [E08280F945CAD7FE0A824B79932EEB96D8F6757D]
+2015-08-24T11:31:26: Ignoring BoltLoader AppDomain -- [105146424] "BoltLoader-c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\redis.exe" [E08280F945CAD7FE0A824B79932EEB96D8F6757D]
+2015-08-24T11:31:26: Launch Static Analysis Module -- [A6E7652B3AAEC157FC5FEA23CF3B2F79C62FAC3C] "c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\Redis.exe"
+2015-08-24T11:31:26: Analysis Confirm: Check for existing Static Capture Hash - Redis.exe ModuleHash[A6E7652B3AAEC157FC5FEA23CF3B2F79C62FAC3C] MerkleHash[0000000000000000000000000000000000000000] DocumentHash[D327D7B9D9E0EA96D394D5D03B94E55A853A41D4]
+2015-08-24T11:31:26: Analysis Confirm: Static Analysis NOT found for Redis.exe by IL hash: ModuleHash[A6E7652B3AAEC157FC5FEA23CF3B2F79C62FAC3C] MerkleHash[0000000000000000000000000000000000000000
+2015-08-24T11:31:26: Analysis for module required Redis.exe: ModuleHash[A6E7652B3AAEC157FC5FEA23CF3B2F79C62FAC3C] MerkleHash[0000000000000000000000000000000000000000]
+2015-08-24T11:31:26: Module Load -- Capture[A6E7652B3AAEC157FC5FEA23CF3B2F79C62FAC3C] Binary[A6E7652B3AAEC157FC5FEA23CF3B2F79C62FAC3C] Merkle[4FCD709F3CB5967DFDBA52242DDE6B9FC7264B3F] Module "c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\Redis.exe"
+2015-08-24T11:31:26: 2015-08-24T11:31:26.8046653+05:00 AnalysisShutdown RECEIVED:  A6E7652B3AAEC157FC5FEA23CF3B2F79C62FAC3C
+2015-08-24T11:31:26: Analysis Shutdown -- [A6E7652B3AAEC157FC5FEA23CF3B2F79C62FAC3C]
+2015-08-24T11:31:26: Static capture finalized -- [A6E7652B3AAEC157FC5FEA23CF3B2F79C62FAC3C] - 75 ms
+2015-08-24T11:31:26: Captures to be updated because of static analysis -- [A6E7652B3AAEC157FC5FEA23CF3B2F79C62FAC3C] - 0
+2015-08-24T11:31:26: Executions modified because of static analysis -- [A6E7652B3AAEC157FC5FEA23CF3B2F79C62FAC3C] - 0
+2015-08-24T11:31:27: AppDomain Execution Started -- [105188848] "Bolt Run - C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\bin\Debug\Redis.exe" [A417E7ECDDD8C88A274986E0C23713963C3E8851]
+2015-08-24T11:31:27: Module Load -- Capture[94F4667BF4D2406A46626944C6DD518F93F3E2DC] Binary[A6E7652B3AAEC157FC5FEA23CF3B2F79C62FAC3C] Merkle[0000000000000000000000000000000000000000] Module "C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\bin\Debug\Redis.exe"
+2015-08-24T11:31:27: Launch Static Analysis Module -- [A6E7652B3AAEC157FC5FEA23CF3B2F79C62FAC3C] "C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\bin\Debug\Redis.exe"
+2015-08-24T11:31:27: Analysis Confirm: Check for existing Static Capture Hash - Redis.exe ModuleHash[A6E7652B3AAEC157FC5FEA23CF3B2F79C62FAC3C] MerkleHash[0000000000000000000000000000000000000000] DocumentHash[D327D7B9D9E0EA96D394D5D03B94E55A853A41D4]
+2015-08-24T11:31:27: Analysis Confirm: Static Analysis NOT found for Redis.exe by IL hash: ModuleHash[A6E7652B3AAEC157FC5FEA23CF3B2F79C62FAC3C] MerkleHash[0000000000000000000000000000000000000000
+2015-08-24T11:31:27: Analysis for module required Redis.exe: ModuleHash[A6E7652B3AAEC157FC5FEA23CF3B2F79C62FAC3C] MerkleHash[0000000000000000000000000000000000000000]
+2015-08-24T11:31:27: Module Load -- Capture[A6E7652B3AAEC157FC5FEA23CF3B2F79C62FAC3C] Binary[A6E7652B3AAEC157FC5FEA23CF3B2F79C62FAC3C] Merkle[4FCD709F3CB5967DFDBA52242DDE6B9FC7264B3F] Module "C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\bin\Debug\Redis.exe"
+2015-08-24T11:31:27: 2015-08-24T11:31:27.6097314+05:00 AnalysisShutdown RECEIVED:  A6E7652B3AAEC157FC5FEA23CF3B2F79C62FAC3C
+2015-08-24T11:31:27: Analysis Shutdown -- [A6E7652B3AAEC157FC5FEA23CF3B2F79C62FAC3C]
+2015-08-24T11:31:27: Static capture finalized -- [A6E7652B3AAEC157FC5FEA23CF3B2F79C62FAC3C] - 87 ms
+2015-08-24T11:31:27: Captures to be updated because of static analysis -- [A6E7652B3AAEC157FC5FEA23CF3B2F79C62FAC3C] - 0
+2015-08-24T11:31:27: Executions modified because of static analysis -- [A6E7652B3AAEC157FC5FEA23CF3B2F79C62FAC3C] - 0
+2015-08-24T11:31:32: App Domain shutdown - finalize [A417E7ECDDD8C88A274986E0C23713963C3E8851] appDomain [Bolt Run - C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\bin\Debug\Redis.exe]
+2015-08-24T11:31:32: Finalize Execution Loading [A417E7ECDDD8C88A274986E0C23713963C3E8851] appDomain [Bolt Run - C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\bin\Debug\Redis.exe] captures [1]
+2015-08-24T11:31:32: Finalize Execution [A417E7ECDDD8C88A274986E0C23713963C3E8851] Loading Complete appDomain [Bolt Run - C:\Users\r.kutliahmetov\Documents\Visual Studio 2013\Projects\Redis\bin\Debug\Redis.exe]
+2015-08-24T11:31:32: Finalize Execution [A417E7ECDDD8C88A274986E0C23713963C3E8851] -- final execution id [A417E7ECDDD8C88A274986E0C23713963C3E8851]
+2015-08-24T11:31:32: [CC706E5565A3CF127FC8E0C47E1E8C655FFFB10E]Create merge queue: project[3E7F569A54D16A35B6FC1471A0D0084DC6B242B3] buildId[Bolt Run - 13552204] execution ct: 1
+2015-08-24T11:31:32: [CC706E5565A3CF127FC8E0C47E1E8C655FFFB10E]Joining merge queue: project[3E7F569A54D16A35B6FC1471A0D0084DC6B242B3] buildId[Bolt Run - 13552204] execution ct: 1
+2015-08-24T11:31:32: Adding 1 execution captures to merge queue: A417E7ECDDD8C88A274986E0C23713963C3E8851
+2015-08-24T11:31:32: Deleting execution after consolidation: A417E7ECDDD8C88A274986E0C23713963C3E8851
+2015-08-24T11:31:32: [CC706E5565A3CF127FC8E0C47E1E8C655FFFB10E] merge request post processing completed.
+2015-08-24T11:31:32: Execution CC706E5565A3CF127FC8E0C47E1E8C655FFFB10E pre-aggregation complete in 00:00:00.0138638
+2015-08-24T11:31:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:32:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:32:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:33:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:33:41: Ignoring BoltLoader AppDomain -- [105700448] "BoltLoader-c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\redis.exe" [E08280F945CAD7FE0A824B79932EEB96D8F6757D]
+2015-08-24T11:33:41: Launch Static Analysis Module -- [9886EFC25128CBB1DD34DE62F6CDA931CDE96393] "c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\Redis.exe"
+2015-08-24T11:33:41: Analysis Confirm: Check for existing Static Capture Hash - Redis.exe ModuleHash[9886EFC25128CBB1DD34DE62F6CDA931CDE96393] MerkleHash[0000000000000000000000000000000000000000] DocumentHash[23C45B6A7629DED9185AB781BBEAAACDD4B53543]
+2015-08-24T11:33:41: Analysis Confirm: Static Analysis NOT found for Redis.exe by IL hash: ModuleHash[9886EFC25128CBB1DD34DE62F6CDA931CDE96393] MerkleHash[0000000000000000000000000000000000000000
+2015-08-24T11:33:41: Analysis for module required Redis.exe: ModuleHash[9886EFC25128CBB1DD34DE62F6CDA931CDE96393] MerkleHash[0000000000000000000000000000000000000000]
+2015-08-24T11:33:41: Module Load -- Capture[9886EFC25128CBB1DD34DE62F6CDA931CDE96393] Binary[9886EFC25128CBB1DD34DE62F6CDA931CDE96393] Merkle[FF0C230FECEC476CF922C35A151AB6978740C0C8] Module "c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\Redis.exe"
+2015-08-24T11:33:41: 2015-08-24T11:33:41.9903333+05:00 AnalysisShutdown RECEIVED:  9886EFC25128CBB1DD34DE62F6CDA931CDE96393
+2015-08-24T11:33:41: Analysis Shutdown -- [9886EFC25128CBB1DD34DE62F6CDA931CDE96393]
+2015-08-24T11:33:42: Static capture finalized -- [9886EFC25128CBB1DD34DE62F6CDA931CDE96393] - 61 ms
+2015-08-24T11:33:42: Captures to be updated because of static analysis -- [9886EFC25128CBB1DD34DE62F6CDA931CDE96393] - 0
+2015-08-24T11:33:42: Executions modified because of static analysis -- [9886EFC25128CBB1DD34DE62F6CDA931CDE96393] - 0
+2015-08-24T11:33:42: AppDomain Execution Started -- [105876376] "Bolt Run - c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\redis.exe" [F99D95F6FD6F0EEB12EC960FD28479C438FF4D3F]
+2015-08-24T11:33:42: Module Load -- Capture[2E4FBF4D3EC11E853BDC72A3057BBB6EE7320C0F] Binary[9886EFC25128CBB1DD34DE62F6CDA931CDE96393] Merkle[0000000000000000000000000000000000000000] Module "c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\Redis.exe"
+2015-08-24T11:33:42: Launch Static Analysis Module -- [9886EFC25128CBB1DD34DE62F6CDA931CDE96393] "c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\Redis.exe"
+2015-08-24T11:33:42: Analysis Confirm: Check for existing Static Capture Hash - Redis.exe ModuleHash[9886EFC25128CBB1DD34DE62F6CDA931CDE96393] MerkleHash[0000000000000000000000000000000000000000] DocumentHash[23C45B6A7629DED9185AB781BBEAAACDD4B53543]
+2015-08-24T11:33:42: Analysis Confirm: Static Analysis NOT found for Redis.exe by IL hash: ModuleHash[9886EFC25128CBB1DD34DE62F6CDA931CDE96393] MerkleHash[0000000000000000000000000000000000000000
+2015-08-24T11:33:42: Analysis for module required Redis.exe: ModuleHash[9886EFC25128CBB1DD34DE62F6CDA931CDE96393] MerkleHash[0000000000000000000000000000000000000000]
+2015-08-24T11:33:42: Module Load -- Capture[9886EFC25128CBB1DD34DE62F6CDA931CDE96393] Binary[9886EFC25128CBB1DD34DE62F6CDA931CDE96393] Merkle[FF0C230FECEC476CF922C35A151AB6978740C0C8] Module "c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\Redis.exe"
+2015-08-24T11:33:42: 2015-08-24T11:33:42.4953838+05:00 AnalysisShutdown RECEIVED:  9886EFC25128CBB1DD34DE62F6CDA931CDE96393
+2015-08-24T11:33:42: Analysis Shutdown -- [9886EFC25128CBB1DD34DE62F6CDA931CDE96393]
+2015-08-24T11:33:42: Static capture finalized -- [9886EFC25128CBB1DD34DE62F6CDA931CDE96393] - 79 ms
+2015-08-24T11:33:42: Captures to be updated because of static analysis -- [9886EFC25128CBB1DD34DE62F6CDA931CDE96393] - 0
+2015-08-24T11:33:42: Executions modified because of static analysis -- [9886EFC25128CBB1DD34DE62F6CDA931CDE96393] - 0
+2015-08-24T11:33:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,000s 
+2015-08-24T11:33:53: App Domain shutdown - finalize [F99D95F6FD6F0EEB12EC960FD28479C438FF4D3F] appDomain [Bolt Run - c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\redis.exe]
+2015-08-24T11:33:53: Finalize Execution Loading [F99D95F6FD6F0EEB12EC960FD28479C438FF4D3F] appDomain [Bolt Run - c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\redis.exe] captures [1]
+2015-08-24T11:33:54: Finalize Execution [F99D95F6FD6F0EEB12EC960FD28479C438FF4D3F] Loading Complete appDomain [Bolt Run - c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\redis.exe]
+2015-08-24T11:33:54: Finalize Execution [F99D95F6FD6F0EEB12EC960FD28479C438FF4D3F] -- final execution id [F99D95F6FD6F0EEB12EC960FD28479C438FF4D3F]
+2015-08-24T11:33:54: [BFD8F5DF47912AD57C1318B067355BB127C3857F]Create merge queue: project[3E7F569A54D16A35B6FC1471A0D0084DC6B242B3] buildId[Bolt Run - fcf6f8f8] execution ct: 1
+2015-08-24T11:33:54: [BFD8F5DF47912AD57C1318B067355BB127C3857F]Joining merge queue: project[3E7F569A54D16A35B6FC1471A0D0084DC6B242B3] buildId[Bolt Run - fcf6f8f8] execution ct: 1
+2015-08-24T11:33:54: Adding 1 execution captures to merge queue: F99D95F6FD6F0EEB12EC960FD28479C438FF4D3F
+2015-08-24T11:33:54: Deleting execution after consolidation: F99D95F6FD6F0EEB12EC960FD28479C438FF4D3F
+2015-08-24T11:33:54: [BFD8F5DF47912AD57C1318B067355BB127C3857F] merge request post processing completed.
+2015-08-24T11:33:54: Execution BFD8F5DF47912AD57C1318B067355BB127C3857F pre-aggregation complete in 00:00:00.0142931
+2015-08-24T11:34:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:34:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:35:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:35:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:36:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,002s 
+2015-08-24T11:36:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:37:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:37:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:38:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:38:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:38:50: Ignoring BoltLoader AppDomain -- [106200784] "BoltLoader-c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\redis.exe" [E08280F945CAD7FE0A824B79932EEB96D8F6757D]
+2015-08-24T11:38:50: Launch Static Analysis Module -- [5A36AC862E1BA3ED0274388FFE9283991AC6FEA6] "c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\Redis.exe"
+2015-08-24T11:38:50: Analysis Confirm: Check for existing Static Capture Hash - Redis.exe ModuleHash[5A36AC862E1BA3ED0274388FFE9283991AC6FEA6] MerkleHash[0000000000000000000000000000000000000000] DocumentHash[C2F868CFE5C98C0350F05FA520AA002F745AD37C]
+2015-08-24T11:38:50: Analysis Confirm: Static Analysis NOT found for Redis.exe by IL hash: ModuleHash[5A36AC862E1BA3ED0274388FFE9283991AC6FEA6] MerkleHash[0000000000000000000000000000000000000000
+2015-08-24T11:38:50: Analysis for module required Redis.exe: ModuleHash[5A36AC862E1BA3ED0274388FFE9283991AC6FEA6] MerkleHash[0000000000000000000000000000000000000000]
+2015-08-24T11:38:50: Module Load -- Capture[5A36AC862E1BA3ED0274388FFE9283991AC6FEA6] Binary[5A36AC862E1BA3ED0274388FFE9283991AC6FEA6] Merkle[55E3ED932C9D2CE1669A261D68939CC1C684E29D] Module "c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\Redis.exe"
+2015-08-24T11:38:51: 2015-08-24T11:38:51.0322199+05:00 AnalysisShutdown RECEIVED:  5A36AC862E1BA3ED0274388FFE9283991AC6FEA6
+2015-08-24T11:38:51: Analysis Shutdown -- [5A36AC862E1BA3ED0274388FFE9283991AC6FEA6]
+2015-08-24T11:38:51: Static capture finalized -- [5A36AC862E1BA3ED0274388FFE9283991AC6FEA6] - 58 ms
+2015-08-24T11:38:51: Captures to be updated because of static analysis -- [5A36AC862E1BA3ED0274388FFE9283991AC6FEA6] - 0
+2015-08-24T11:38:51: Executions modified because of static analysis -- [5A36AC862E1BA3ED0274388FFE9283991AC6FEA6] - 0
+2015-08-24T11:38:51: AppDomain Execution Started -- [105506544] "Bolt Run - c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\redis.exe" [79F10449F19AA8CACCA335ADD6A54D6389FB7FE1]
+2015-08-24T11:38:51: Module Load -- Capture[0A8A7853ED0BBC69205DAEC6C84606ECC3E1D92F] Binary[5A36AC862E1BA3ED0274388FFE9283991AC6FEA6] Merkle[0000000000000000000000000000000000000000] Module "c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\Redis.exe"
+2015-08-24T11:38:51: Launch Static Analysis Module -- [5A36AC862E1BA3ED0274388FFE9283991AC6FEA6] "c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\Redis.exe"
+2015-08-24T11:38:51: Analysis Confirm: Check for existing Static Capture Hash - Redis.exe ModuleHash[5A36AC862E1BA3ED0274388FFE9283991AC6FEA6] MerkleHash[0000000000000000000000000000000000000000] DocumentHash[C2F868CFE5C98C0350F05FA520AA002F745AD37C]
+2015-08-24T11:38:51: Analysis Confirm: Static Analysis NOT found for Redis.exe by IL hash: ModuleHash[5A36AC862E1BA3ED0274388FFE9283991AC6FEA6] MerkleHash[0000000000000000000000000000000000000000
+2015-08-24T11:38:51: Analysis for module required Redis.exe: ModuleHash[5A36AC862E1BA3ED0274388FFE9283991AC6FEA6] MerkleHash[0000000000000000000000000000000000000000]
+2015-08-24T11:38:51: Module Load -- Capture[5A36AC862E1BA3ED0274388FFE9283991AC6FEA6] Binary[5A36AC862E1BA3ED0274388FFE9283991AC6FEA6] Merkle[55E3ED932C9D2CE1669A261D68939CC1C684E29D] Module "c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\Redis.exe"
+2015-08-24T11:38:51: 2015-08-24T11:38:51.7008159+05:00 AnalysisShutdown RECEIVED:  5A36AC862E1BA3ED0274388FFE9283991AC6FEA6
+2015-08-24T11:38:51: Analysis Shutdown -- [5A36AC862E1BA3ED0274388FFE9283991AC6FEA6]
+2015-08-24T11:38:51: Static capture finalized -- [5A36AC862E1BA3ED0274388FFE9283991AC6FEA6] - 88 ms
+2015-08-24T11:38:51: Captures to be updated because of static analysis -- [5A36AC862E1BA3ED0274388FFE9283991AC6FEA6] - 0
+2015-08-24T11:38:51: Executions modified because of static analysis -- [5A36AC862E1BA3ED0274388FFE9283991AC6FEA6] - 0
+2015-08-24T11:39:07: App Domain shutdown - finalize [79F10449F19AA8CACCA335ADD6A54D6389FB7FE1] appDomain [Bolt Run - c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\redis.exe]
+2015-08-24T11:39:07: Finalize Execution Loading [79F10449F19AA8CACCA335ADD6A54D6389FB7FE1] appDomain [Bolt Run - c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\redis.exe] captures [1]
+2015-08-24T11:39:07: Finalize Execution [79F10449F19AA8CACCA335ADD6A54D6389FB7FE1] Loading Complete appDomain [Bolt Run - c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\redis.exe]
+2015-08-24T11:39:07: Finalize Execution [79F10449F19AA8CACCA335ADD6A54D6389FB7FE1] -- final execution id [79F10449F19AA8CACCA335ADD6A54D6389FB7FE1]
+2015-08-24T11:39:07: [305E3C05860D3CFC827AB9683B2578D6035C80C5]Create merge queue: project[3E7F569A54D16A35B6FC1471A0D0084DC6B242B3] buildId[Bolt Run - fbe4a3b8] execution ct: 1
+2015-08-24T11:39:07: [305E3C05860D3CFC827AB9683B2578D6035C80C5]Joining merge queue: project[3E7F569A54D16A35B6FC1471A0D0084DC6B242B3] buildId[Bolt Run - fbe4a3b8] execution ct: 1
+2015-08-24T11:39:07: Adding 1 execution captures to merge queue: 79F10449F19AA8CACCA335ADD6A54D6389FB7FE1
+2015-08-24T11:39:07: Deleting execution after consolidation: 79F10449F19AA8CACCA335ADD6A54D6389FB7FE1
+2015-08-24T11:39:07: [305E3C05860D3CFC827AB9683B2578D6035C80C5] merge request post processing completed.
+2015-08-24T11:39:07: Execution 305E3C05860D3CFC827AB9683B2578D6035C80C5 pre-aggregation complete in 00:00:00.0150580
+2015-08-24T11:39:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:39:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:40:10: Ignoring BoltLoader AppDomain -- [105876376] "BoltLoader-c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\redis.exe" [E08280F945CAD7FE0A824B79932EEB96D8F6757D]
+2015-08-24T11:40:10: Launch Static Analysis Module -- [7F694E2EBC75BD33E8A48C1CC643FC60D7BA1CA7] "c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\Redis.exe"
+2015-08-24T11:40:10: Analysis Confirm: Check for existing Static Capture Hash - Redis.exe ModuleHash[7F694E2EBC75BD33E8A48C1CC643FC60D7BA1CA7] MerkleHash[0000000000000000000000000000000000000000] DocumentHash[F535BA89D4A047F789086EDB17416A1AB929D5E1]
+2015-08-24T11:40:10: Analysis Confirm: Static Analysis NOT found for Redis.exe by IL hash: ModuleHash[7F694E2EBC75BD33E8A48C1CC643FC60D7BA1CA7] MerkleHash[0000000000000000000000000000000000000000
+2015-08-24T11:40:10: Analysis for module required Redis.exe: ModuleHash[7F694E2EBC75BD33E8A48C1CC643FC60D7BA1CA7] MerkleHash[0000000000000000000000000000000000000000]
+2015-08-24T11:40:10: Module Load -- Capture[7F694E2EBC75BD33E8A48C1CC643FC60D7BA1CA7] Binary[7F694E2EBC75BD33E8A48C1CC643FC60D7BA1CA7] Merkle[ABBBF82EF0764E82231B10FA10D328CB498B7159] Module "c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\Redis.exe"
+2015-08-24T11:40:10: 2015-08-24T11:40:10.7213498+05:00 AnalysisShutdown RECEIVED:  7F694E2EBC75BD33E8A48C1CC643FC60D7BA1CA7
+2015-08-24T11:40:10: Analysis Shutdown -- [7F694E2EBC75BD33E8A48C1CC643FC60D7BA1CA7]
+2015-08-24T11:40:10: Static capture finalized -- [7F694E2EBC75BD33E8A48C1CC643FC60D7BA1CA7] - 73 ms
+2015-08-24T11:40:10: Captures to be updated because of static analysis -- [7F694E2EBC75BD33E8A48C1CC643FC60D7BA1CA7] - 0
+2015-08-24T11:40:10: Executions modified because of static analysis -- [7F694E2EBC75BD33E8A48C1CC643FC60D7BA1CA7] - 0
+2015-08-24T11:40:11: AppDomain Execution Started -- [105865496] "Bolt Run - c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\redis.exe" [0B43C26E4DEC01579506E145D3A060762C3769BE]
+2015-08-24T11:40:11: Module Load -- Capture[51DDFE937EE92DCB0AE2553F64E0CE78ADD63CCE] Binary[7F694E2EBC75BD33E8A48C1CC643FC60D7BA1CA7] Merkle[0000000000000000000000000000000000000000] Module "c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\Redis.exe"
+2015-08-24T11:40:11: Launch Static Analysis Module -- [7F694E2EBC75BD33E8A48C1CC643FC60D7BA1CA7] "c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\Redis.exe"
+2015-08-24T11:40:11: Analysis Confirm: Check for existing Static Capture Hash - Redis.exe ModuleHash[7F694E2EBC75BD33E8A48C1CC643FC60D7BA1CA7] MerkleHash[0000000000000000000000000000000000000000] DocumentHash[F535BA89D4A047F789086EDB17416A1AB929D5E1]
+2015-08-24T11:40:11: Analysis Confirm: Static Analysis NOT found for Redis.exe by IL hash: ModuleHash[7F694E2EBC75BD33E8A48C1CC643FC60D7BA1CA7] MerkleHash[0000000000000000000000000000000000000000
+2015-08-24T11:40:11: Analysis for module required Redis.exe: ModuleHash[7F694E2EBC75BD33E8A48C1CC643FC60D7BA1CA7] MerkleHash[0000000000000000000000000000000000000000]
+2015-08-24T11:40:11: Module Load -- Capture[7F694E2EBC75BD33E8A48C1CC643FC60D7BA1CA7] Binary[7F694E2EBC75BD33E8A48C1CC643FC60D7BA1CA7] Merkle[ABBBF82EF0764E82231B10FA10D328CB498B7159] Module "c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\Redis.exe"
+2015-08-24T11:40:11: 2015-08-24T11:40:11.3769562+05:00 AnalysisShutdown RECEIVED:  7F694E2EBC75BD33E8A48C1CC643FC60D7BA1CA7
+2015-08-24T11:40:11: Analysis Shutdown -- [7F694E2EBC75BD33E8A48C1CC643FC60D7BA1CA7]
+2015-08-24T11:40:11: Static capture finalized -- [7F694E2EBC75BD33E8A48C1CC643FC60D7BA1CA7] - 62 ms
+2015-08-24T11:40:11: Captures to be updated because of static analysis -- [7F694E2EBC75BD33E8A48C1CC643FC60D7BA1CA7] - 0
+2015-08-24T11:40:11: Executions modified because of static analysis -- [7F694E2EBC75BD33E8A48C1CC643FC60D7BA1CA7] - 0
+2015-08-24T11:40:15: App Domain shutdown - finalize [0B43C26E4DEC01579506E145D3A060762C3769BE] appDomain [Bolt Run - c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\redis.exe]
+2015-08-24T11:40:15: Finalize Execution Loading [0B43C26E4DEC01579506E145D3A060762C3769BE] appDomain [Bolt Run - c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\redis.exe] captures [1]
+2015-08-24T11:40:15: Finalize Execution [0B43C26E4DEC01579506E145D3A060762C3769BE] Loading Complete appDomain [Bolt Run - c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\redis.exe]
+2015-08-24T11:40:15: Finalize Execution [0B43C26E4DEC01579506E145D3A060762C3769BE] -- final execution id [0B43C26E4DEC01579506E145D3A060762C3769BE]
+2015-08-24T11:40:15: [CC637C64189AB0A34D1C7EB98C9B01ED2BDDCF90]Create merge queue: project[3E7F569A54D16A35B6FC1471A0D0084DC6B242B3] buildId[Bolt Run - 677d96bc] execution ct: 1
+2015-08-24T11:40:15: [CC637C64189AB0A34D1C7EB98C9B01ED2BDDCF90]Joining merge queue: project[3E7F569A54D16A35B6FC1471A0D0084DC6B242B3] buildId[Bolt Run - 677d96bc] execution ct: 1
+2015-08-24T11:40:15: Adding 1 execution captures to merge queue: 0B43C26E4DEC01579506E145D3A060762C3769BE
+2015-08-24T11:40:15: Deleting execution after consolidation: 0B43C26E4DEC01579506E145D3A060762C3769BE
+2015-08-24T11:40:15: [CC637C64189AB0A34D1C7EB98C9B01ED2BDDCF90] merge request post processing completed.
+2015-08-24T11:40:15: Execution CC637C64189AB0A34D1C7EB98C9B01ED2BDDCF90 pre-aggregation complete in 00:00:00.0155782
+2015-08-24T11:40:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:40:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:41:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:41:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:42:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:42:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:43:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,000s 
+2015-08-24T11:43:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:44:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:44:24: Ignoring BoltLoader AppDomain -- [4589552] "BoltLoader-c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\redis.exe" [E08280F945CAD7FE0A824B79932EEB96D8F6757D]
+2015-08-24T11:44:24: Launch Static Analysis Module -- [9A30FE614F22CE552EF75FF22F28C76005F5C48B] "c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\Redis.exe"
+2015-08-24T11:44:24: Analysis Confirm: Check for existing Static Capture Hash - Redis.exe ModuleHash[9A30FE614F22CE552EF75FF22F28C76005F5C48B] MerkleHash[0000000000000000000000000000000000000000] DocumentHash[E6D89BE20281D161F87118F66C24E4020B2B02AB]
+2015-08-24T11:44:24: Analysis Confirm: Static Analysis NOT found for Redis.exe by IL hash: ModuleHash[9A30FE614F22CE552EF75FF22F28C76005F5C48B] MerkleHash[0000000000000000000000000000000000000000
+2015-08-24T11:44:24: Analysis for module required Redis.exe: ModuleHash[9A30FE614F22CE552EF75FF22F28C76005F5C48B] MerkleHash[0000000000000000000000000000000000000000]
+2015-08-24T11:44:24: Module Load -- Capture[9A30FE614F22CE552EF75FF22F28C76005F5C48B] Binary[9A30FE614F22CE552EF75FF22F28C76005F5C48B] Merkle[5A739ABB4FC5C528E6B969F92479B05EBF48E83B] Module "c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\Redis.exe"
+2015-08-24T11:44:24: 2015-08-24T11:44:24.7137308+05:00 AnalysisShutdown RECEIVED:  9A30FE614F22CE552EF75FF22F28C76005F5C48B
+2015-08-24T11:44:24: Analysis Shutdown -- [9A30FE614F22CE552EF75FF22F28C76005F5C48B]
+2015-08-24T11:44:24: Static capture finalized -- [9A30FE614F22CE552EF75FF22F28C76005F5C48B] - 122 ms
+2015-08-24T11:44:24: Captures to be updated because of static analysis -- [9A30FE614F22CE552EF75FF22F28C76005F5C48B] - 0
+2015-08-24T11:44:24: Executions modified because of static analysis -- [9A30FE614F22CE552EF75FF22F28C76005F5C48B] - 0
+2015-08-24T11:44:25: AppDomain Execution Started -- [105876376] "Bolt Run - c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\redis.exe" [D04814FA2783A86B293D7365690A88115F399F72]
+2015-08-24T11:44:25: Module Load -- Capture[B5288B865D8ECA9FB3BA3BF461407AE2455B8520] Binary[9A30FE614F22CE552EF75FF22F28C76005F5C48B] Merkle[0000000000000000000000000000000000000000] Module "c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\Redis.exe"
+2015-08-24T11:44:25: Launch Static Analysis Module -- [9A30FE614F22CE552EF75FF22F28C76005F5C48B] "c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\Redis.exe"
+2015-08-24T11:44:25: Analysis Confirm: Check for existing Static Capture Hash - Redis.exe ModuleHash[9A30FE614F22CE552EF75FF22F28C76005F5C48B] MerkleHash[0000000000000000000000000000000000000000] DocumentHash[E6D89BE20281D161F87118F66C24E4020B2B02AB]
+2015-08-24T11:44:25: Analysis Confirm: Static Analysis NOT found for Redis.exe by IL hash: ModuleHash[9A30FE614F22CE552EF75FF22F28C76005F5C48B] MerkleHash[0000000000000000000000000000000000000000
+2015-08-24T11:44:25: Analysis for module required Redis.exe: ModuleHash[9A30FE614F22CE552EF75FF22F28C76005F5C48B] MerkleHash[0000000000000000000000000000000000000000]
+2015-08-24T11:44:25: Module Load -- Capture[9A30FE614F22CE552EF75FF22F28C76005F5C48B] Binary[9A30FE614F22CE552EF75FF22F28C76005F5C48B] Merkle[5A739ABB4FC5C528E6B969F92479B05EBF48E83B] Module "c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\Redis.exe"
+2015-08-24T11:44:25: 2015-08-24T11:44:25.4845766+05:00 AnalysisShutdown RECEIVED:  9A30FE614F22CE552EF75FF22F28C76005F5C48B
+2015-08-24T11:44:25: Analysis Shutdown -- [9A30FE614F22CE552EF75FF22F28C76005F5C48B]
+2015-08-24T11:44:25: Static capture finalized -- [9A30FE614F22CE552EF75FF22F28C76005F5C48B] - 142 ms
+2015-08-24T11:44:25: Captures to be updated because of static analysis -- [9A30FE614F22CE552EF75FF22F28C76005F5C48B] - 0
+2015-08-24T11:44:25: Executions modified because of static analysis -- [9A30FE614F22CE552EF75FF22F28C76005F5C48B] - 0
+2015-08-24T11:44:31: App Domain shutdown - finalize [D04814FA2783A86B293D7365690A88115F399F72] appDomain [Bolt Run - c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\redis.exe]
+2015-08-24T11:44:31: Finalize Execution Loading [D04814FA2783A86B293D7365690A88115F399F72] appDomain [Bolt Run - c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\redis.exe] captures [1]
+2015-08-24T11:44:31: Finalize Execution [D04814FA2783A86B293D7365690A88115F399F72] Loading Complete appDomain [Bolt Run - c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\bin\debug\redis.exe]
+2015-08-24T11:44:31: Finalize Execution [D04814FA2783A86B293D7365690A88115F399F72] -- final execution id [D04814FA2783A86B293D7365690A88115F399F72]
+2015-08-24T11:44:31: [B46B3FABA1EA4586469DAE6FC2F0FD6691A34EC0]Create merge queue: project[3E7F569A54D16A35B6FC1471A0D0084DC6B242B3] buildId[Bolt Run - 9b99d853] execution ct: 1
+2015-08-24T11:44:31: [B46B3FABA1EA4586469DAE6FC2F0FD6691A34EC0]Joining merge queue: project[3E7F569A54D16A35B6FC1471A0D0084DC6B242B3] buildId[Bolt Run - 9b99d853] execution ct: 1
+2015-08-24T11:44:31: Adding 1 execution captures to merge queue: D04814FA2783A86B293D7365690A88115F399F72
+2015-08-24T11:44:31: Deleting execution after consolidation: D04814FA2783A86B293D7365690A88115F399F72
+2015-08-24T11:44:31: [B46B3FABA1EA4586469DAE6FC2F0FD6691A34EC0] merge request post processing completed.
+2015-08-24T11:44:31: Execution B46B3FABA1EA4586469DAE6FC2F0FD6691A34EC0 pre-aggregation complete in 00:00:00.0171184
+2015-08-24T11:44:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:45:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:45:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:46:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:46:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T11:47:04: Closing bolt session for c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\.redis.boltdata - SessionId: 2f180aa9-2147-4da6-89ec-f62fc559ee23

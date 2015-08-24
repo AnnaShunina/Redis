@@ -80,8 +80,10 @@ namespace Redis.Cache
             //When
             _layer1.Data[key] = val;
             string value = _twoLayerCache.Get(key);
+            var val2 = _layer1.Get(key);
             //Then
             Assert.AreEqual(value, val);
+            Assert.AreEqual(value, val2);
         }
 
         [Test]
@@ -93,8 +95,10 @@ namespace Redis.Cache
             //When
             _layer2.Data[key] = val;
             string value = _twoLayerCache.Get(key);
+            var val2 = _layer2.Get(key);
             //Then
             Assert.AreEqual(value, val);
+            Assert.AreEqual(value, val2);
         }
 
         [Test]
@@ -190,7 +194,6 @@ namespace Redis.Cache
             //Given
             int[] a = {0};
             //When
-            _messageBus.Subscribe("key1", (k, v) => Interlocked.Increment(ref a[0]));
             _messageBus.Subscribe("key1", (k, v) => Interlocked.Increment(ref a[0]));
             _twoLayerCache.Set("key1", "value1");
             _twoLayerCache.Set("key1", "value2");

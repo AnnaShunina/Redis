@@ -96,7 +96,7 @@ namespace Redis.Cache.RedisCache
             {
                 throw new ArgumentNullException("key");
             }
-
+            
             var cacheKey = GetCacheKey(key);
 
             _database.Value.KeyDelete(cacheKey);

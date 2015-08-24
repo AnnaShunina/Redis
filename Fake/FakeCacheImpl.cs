@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Redis.Cache.Interface;
 
 namespace Redis.Fake
@@ -17,12 +18,7 @@ namespace Redis.Fake
         public string Get(string key)
         {
             string value;
-
-            if (Data.TryGetValue(key, out value))
-            {
-                return value;
-            }
-
+            if (Data.TryGetValue(key, out value)) return value;
             return null;
         }
 

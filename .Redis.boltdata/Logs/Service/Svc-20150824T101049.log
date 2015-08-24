@@ -1,0 +1,35 @@
+2015-08-24T10:10:49: Launching bolt session for c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\.redis.boltdata - SessionId: 261cbfaf-d3c0-43c2-a37c-ca8fffab2a7c
+2015-08-24T10:10:55: GET http://127.0.0.1:11235/v1/licensed.json 200 0,000s 
+2015-08-24T10:10:56: NOT LICENSED: Unable to retrieve license for NC-BOLT from license cache.
+2015-08-24T10:11:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T10:11:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,008s 
+2015-08-24T10:12:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T10:12:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T10:13:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T10:13:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T10:14:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T10:14:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T10:15:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T10:15:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T10:16:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T10:16:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T10:17:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T10:17:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T10:17:56: GET http://127.0.0.1:11235/v1/licensed.json 200 0,001s 
+2015-08-24T10:18:03: GET http://127.0.0.1:11235/v1/licensed.json 200 0,001s 
+2015-08-24T10:18:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T10:18:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T10:19:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T10:19:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T10:20:17: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T10:20:47: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T10:20:50: Launching bolt session for c:\programdata\ncoverdata - SessionId: 7afd6102-1424-4cc4-9408-61a0b6fbb7ac
+2015-08-24T10:20:53: Successful license activation.  ResultCode[]
+2015-08-24T10:20:53:   Sku: :
+2015-08-24T10:20:53:   Floating:   of 
+2015-08-24T10:20:53:   Static:   of 
+2015-08-24T10:20:53: POST http://127.0.0.1:11235/v1/install-license 200 0,009s 
+2015-08-24T10:20:53: GET http://127.0.0.1:11235/v1/licensed.json 200 0,021s 
+2015-08-24T10:20:53: GET http://127.0.0.1:11235/v1/licensed.json 200 0,001s 
+2015-08-24T10:20:56: GET http://127.0.0.1:11235/v1/licensed.json 200 0,002s 
+2015-08-24T10:20:56: Closing bolt session for c:\programdata\ncoverdata - SessionId: 7afd6102-1424-4cc4-9408-61a0b6fbb7ac

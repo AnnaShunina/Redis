@@ -1,0 +1,9 @@
+2015-08-24T10:06:56: Launching bolt session for c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\.redis.boltdata - SessionId: bb24bf55-42b8-491b-9e41-2862241a337b
+2015-08-24T10:07:07: GET http://127.0.0.1:11235/v1/licensed.json 200 0,001s 
+2015-08-24T10:07:08: NOT LICENSED: Unable to retrieve license for NC-BOLT from license cache.
+2015-08-24T10:07:12: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T10:07:42: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T10:08:12: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T10:08:42: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T10:09:12: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T10:09:18: Closing bolt session for c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\.redis.boltdata - SessionId: bb24bf55-42b8-491b-9e41-2862241a337b

@@ -89,13 +89,13 @@ namespace Redis.Cache.MemoryCache
         public void ShouldEqualGet()
         {
             //Given
-            string key = "key1";
-            string value = "example";
+            const string key = "key1";
+            const string value = "example";
             //When
             _cache.Set(key, value);
             //Then
-            string _value = _cache.Get(key);
-            Assert.AreEqual(value, _value);
+            var value2 = _cache.Get(key);
+            Assert.AreEqual(value, value2);
         }
 
         [Test]

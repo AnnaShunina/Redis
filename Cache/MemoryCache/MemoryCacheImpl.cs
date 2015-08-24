@@ -20,7 +20,7 @@ namespace Redis.Cache.MemoryCache
 
 
         private readonly System.Runtime.Caching.MemoryCache _cache;
-        public string Name { get; private set; }
+        public readonly string Name;
 
         public bool Contains(string key)
         {
@@ -43,7 +43,7 @@ namespace Redis.Cache.MemoryCache
 
         public bool TryGet(string key, out string value)
         {
-            if (string.IsNullOrEmpty(key))
+            if (string.IsNullOrWhiteSpace(key))
             {
                 throw new ArgumentNullException("key");
             }
