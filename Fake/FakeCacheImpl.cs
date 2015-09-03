@@ -4,7 +4,7 @@ using Redis.Cache.Interface;
 
 namespace Redis.Fake
 {
-    internal sealed class FakeCacheImpl : ICache
+    internal sealed class FakeCacheImpl : ICache, IDisposable
     {
         public readonly Dictionary<string, string> Data
             = new Dictionary<string, string>();
@@ -38,6 +38,10 @@ namespace Redis.Fake
         }
 
         public void Clear()
+        {
+            Data.Clear();
+        }
+        public void Dispose()
         {
             Data.Clear();
         }

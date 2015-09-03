@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Concurrent;
+using System.Threading.Tasks;
 using Redis.Cache.Interface;
 
 namespace Redis.Cache
@@ -65,6 +66,9 @@ namespace Redis.Cache
                 else
                 {
                     exists = true;
+
+                    _cacheLayer1.Set(key, value);
+
                     SubscribeOnKeyChanged(key);
                 }
             }
@@ -146,26 +150,20 @@ namespace Redis.Cache
             {
                 UnsubscribeOnKeyChanged(subscription.Key);
             }
+
         }
 
 
         private void NotifyOnKeyChanged(string key)
         {
-            try
-            {
-                _messageBus.Publish(key, _publisherId);
-            }
-            catch
-            {
-                // ignored
-            }
+            ExecuteAsync(() => _messageBus.Publish(key, _publisherId));
         }
 
         private void SubscribeOnKeyChanged(string key)
         {
             if (!_subscriptions.ContainsKey(key))
             {
-                try
+                ExecuteAsync(() =>
                 {
                     var subscription = _messageBus.Subscribe(key, (k, v) =>
                     {
@@ -183,11 +181,7 @@ namespace Redis.Cache
                     });
 
                     _subscriptions.TryAdd(key, subscription);
-                }
-                catch
-                {
-                    // ignored
-                }
+                });
             }
         }
 
@@ -197,15 +191,22 @@ namespace Redis.Cache
 
             if (_subscriptions.TryRemove(key, out subscription))
             {
+                ExecuteAsync(subscription.Dispose);
+            }
+        }
+
+        private static void ExecuteAsync(Action action)
+        {
+            Task.Run(() =>
+            {
                 try
                 {
-                    subscription.Dispose();
+                    action();
                 }
                 catch
                 {
-                    // ignored
                 }
-            }
+            });
         }
     }
 }

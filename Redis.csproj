@@ -62,20 +62,28 @@
     <Reference Include="System.Runtime.Caching" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cache\Tests\GC\GCRedisLayerCacheTest.cs" />
+    <Compile Include="Cache\Tests\GC\GCMemoryLayerCacheTest.cs" />
+    <Compile Include="Cache\Tests\GC\GCTwoLayerCacheFakeMemoryTest.cs" />
+    <Compile Include="Cache\Tests\GC\GCTwoLayerCacheRealMemoryTest.cs" />
+    <Compile Include="Cache\Tests\Perfomance\PerfomanceMemoryLayerCacheTest.cs" />
+    <Compile Include="Cache\Tests\Perfomance\PerfomanceRedisLayerCacheTest.cs" />
+    <Compile Include="Cache\Tests\Perfomance\PerfomanceTwoLayerFakeCacheTest.cs" />
+    <Compile Include="Cache\Tests\Perfomance\PerfomanceTwoLayerRealCacheTest.cs" />
     <Compile Include="Fake\FakeCacheImpl.cs" />
     <Compile Include="Fake\FakeMessageBus.cs" />
     <Compile Include="Cache\Interface\ICache.cs" />
     <Compile Include="Cache\Interface\IMessageBus.cs" />
-    <Compile Include="Cache\MemoryCache\MemoryCacheImpl.cs" />
-    <Compile Include="Cache\MemoryCache\MemoryCacheTest.cs" />
+    <Compile Include="Cache\MemoryCacheImpl.cs" />
+    <Compile Include="Cache\Tests\MemoryCacheTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Cache\RedisCache\RedisCacheImpl.cs" />
-    <Compile Include="Cache\RedisCache\RedisCacheTest.cs" />
-    <Compile Include="Cache\RedisCache\MessageBus\RedisMessageBus.cs" />
-    <Compile Include="Cache\RedisCache\MessageBus\RedisMessageBusTest.cs" />
+    <Compile Include="Cache\RedisCacheImpl.cs" />
+    <Compile Include="Cache\Tests\RedisCacheTest.cs" />
+    <Compile Include="Cache\RedisMessageBus.cs" />
+    <Compile Include="Cache\Tests\RedisMessageBusTest.cs" />
     <Compile Include="Cache\TwoLayerCacheImpl.cs" />
-    <Compile Include="Cache\TwoLayerCacheTest.cs" />
+    <Compile Include="Cache\Tests\TwoLayerCacheTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

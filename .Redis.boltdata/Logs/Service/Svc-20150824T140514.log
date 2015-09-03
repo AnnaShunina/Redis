@@ -1,0 +1,150 @@
+2015-08-24T14:05:14: Launching bolt session for c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\.redis.boltdata - SessionId: 13e42d8f-37d1-45af-8540-7ff4526c1f04
+2015-08-24T14:05:39: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:06:09: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:06:39: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:07:09: GET http://127.0.0.1:11235/serveravailable.json 200 0,005s 
+2015-08-24T14:07:39: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:08:09: GET http://127.0.0.1:11235/serveravailable.json 200 0,007s 
+2015-08-24T14:08:39: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:09:09: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:09:39: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:10:09: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:10:39: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:11:09: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:11:39: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:12:09: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:12:39: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:13:10: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:13:40: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:14:10: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:14:40: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:15:10: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:15:40: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:16:10: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:16:40: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:17:10: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:17:40: GET http://127.0.0.1:11235/serveravailable.json 200 0,002s 
+2015-08-24T14:18:10: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:18:40: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:19:10: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:19:40: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:20:10: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:20:40: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:21:10: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:21:40: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:22:10: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:22:40: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:23:10: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:23:40: GET http://127.0.0.1:11235/serveravailable.json 200 0,002s 
+2015-08-24T14:24:10: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:24:40: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:25:10: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:25:40: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:26:10: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:26:40: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:27:10: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:27:40: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:28:10: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:28:40: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:29:10: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:29:40: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:30:10: GET http://127.0.0.1:11235/serveravailable.json 200 0,002s 
+2015-08-24T14:30:40: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:31:10: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:31:40: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:32:10: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:32:40: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:33:10: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:33:40: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:34:10: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:34:40: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:35:10: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:35:40: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:36:10: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:36:40: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:37:10: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:37:40: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:38:10: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:38:40: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:39:10: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:39:40: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:40:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:40:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:41:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:41:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:42:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,000s 
+2015-08-24T14:42:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:43:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,000s 
+2015-08-24T14:43:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:44:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,000s 
+2015-08-24T14:44:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:45:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:45:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:46:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,002s 
+2015-08-24T14:46:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:47:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:47:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:48:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:48:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:49:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:49:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:50:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:50:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:51:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:51:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,003s 
+2015-08-24T14:52:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:52:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:53:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:53:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,000s 
+2015-08-24T14:54:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:54:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:55:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:55:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,000s 
+2015-08-24T14:56:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:56:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:57:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,002s 
+2015-08-24T14:57:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:58:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:58:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:59:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T14:59:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T15:00:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T15:00:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,002s 
+2015-08-24T15:01:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T15:01:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T15:02:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T15:02:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,000s 
+2015-08-24T15:03:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T15:03:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,000s 
+2015-08-24T15:04:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T15:04:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T15:05:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,002s 
+2015-08-24T15:05:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,000s 
+2015-08-24T15:06:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T15:06:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,000s 
+2015-08-24T15:07:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T15:07:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T15:08:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T15:08:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T15:09:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T15:09:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T15:10:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,000s 
+2015-08-24T15:10:41: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T15:11:11: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T15:11:34: Waiting for process to exit:  Bolt.Agent.40.x86(3564)
+2015-08-24T15:11:34: Monitoring Process -- [3564] "C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\NCover\Bolt\5.0.2853.638\Bolt.Agent.40.x86.exe"
+2015-08-24T15:11:34: Execution -- [00B20B8067002BB4BE590923651C0A7C6A9D4211] 
+2015-08-24T15:11:35: AllocatedPage -- [Global\GN_PAGE_001_3564] - 16777216
+2015-08-24T15:11:35: Default AppDomain Started -- [1796083552] "mscorlib.dll" [00B20B8067002BB4BE590923651C0A7C6A9D4211]
+2015-08-24T15:11:35: Default AppDomain Started -- [3242568] "DefaultDomain" [00B20B8067002BB4BE590923651C0A7C6A9D4211]
+2015-08-24T15:11:35: Default AppDomain Started -- [1796082696] "EE Shared Assembly Repository" [00B20B8067002BB4BE590923651C0A7C6A9D4211]
+2015-08-24T15:11:42: GET http://127.0.0.1:11235/serveravailable.json 200 0,001s 
+2015-08-24T15:11:55: Process shutdown - request execution finalize [00B20B8067002BB4BE590923651C0A7C6A9D4211]
+2015-08-24T15:11:55: Process shutdown - finalize execution [00B20B8067002BB4BE590923651C0A7C6A9D4211] total appDomains 0
+2015-08-24T15:11:55: Finalize Execution Loading [00B20B8067002BB4BE590923651C0A7C6A9D4211] appDomain [] captures [0]
+2015-08-24T15:11:55: NO DATA for execution: [0:X]
+2015-08-24T15:11:55: Finalize Execution [00B20B8067002BB4BE590923651C0A7C6A9D4211] -- final execution id [00B20B8067002BB4BE590923651C0A7C6A9D4211]
+2015-08-24T15:11:55: [8DCB0E1AA9013BC665017A8DF06840616B0EB398]Create merge queue: project[3E7F569A54D16A35B6FC1471A0D0084DC6B242B3] buildId[00B20B8067] execution ct: 0
+2015-08-24T15:11:55: [8DCB0E1AA9013BC665017A8DF06840616B0EB398]Joining merge queue: project[3E7F569A54D16A35B6FC1471A0D0084DC6B242B3] buildId[00B20B8067] execution ct: 0
+2015-08-24T15:11:55: Process shutdown complete - Bolt session: 13e42d8f-37d1-45af-8540-7ff4526c1f04
+2015-08-24T15:12:09: Closing bolt session for c:\users\r.kutliahmetov\documents\visual studio 2013\projects\redis\.redis.boltdata - SessionId: 13e42d8f-37d1-45af-8540-7ff4526c1f04
